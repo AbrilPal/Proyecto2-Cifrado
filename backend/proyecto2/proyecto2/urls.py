@@ -19,5 +19,8 @@ from proyecto2App import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('testget/', views.holimundo )
+    path('testget/', views.holimundo ),
+    path('registro/', views.registro ),
+    path('login/', views.login )
+    
 ]

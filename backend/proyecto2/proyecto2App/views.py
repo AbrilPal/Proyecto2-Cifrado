@@ -19,3 +19,26 @@ def holimundo(self):
     return JsonResponse(response)
   except ValueError as e: 
     return Response(e.args[0], status.HTTP_404_NOT_FOUND)
+
+
+@api_view(["POST"])
+def registro(self, correo, nombre, usuario, clave): 
+  try:
+    #cifrar el pass y hacer el insert en la db
+    response = {
+      'response': 'registrado'
+    }
+    return JsonResponse(response)
+  except ValueError as e: 
+    return Response(e.args[0], status.HTTP_404_NOT_FOUND)
+
+@api_view(["POST"])
+def login(self, correo, nombre, usuario, clave): 
+  try:
+    #cifrar el pass y hacer el login en la db
+    response = {
+      'response': 'ok'
+    }
+    return JsonResponse(response)
+  except ValueError as e: 
+    return Response(e.args[0], status.HTTP_404_NOT_FOUND)    
