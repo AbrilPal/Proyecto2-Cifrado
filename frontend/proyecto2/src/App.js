@@ -10,6 +10,8 @@ function App() {
         <p>
           QUE ONDA PERROS! ♥
         </p>
+        <div className="index">
+        </div>
       </header>
     </div>
   );
