@@ -1,0 +1,9 @@
+.auth-container {
+    margin-top: 150px;
+    display: flex;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+}
