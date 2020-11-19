@@ -8,7 +8,7 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          QUE ONDA PERROS! ♥
+          QUE ONDA PERROS! ♥ http://127.0.0.1:8000/
         </p>
       </header> */}
       <section className="loginDiv">

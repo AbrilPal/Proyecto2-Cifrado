@@ -11,24 +11,27 @@
     display: flex;
     background-color: whitesmoke;
     height: 350px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
+    /* display: grid;
+    grid-template-rows: auto auto auto; */
     border-radius: 100% 0% 83% 17% / 15% 100% 0% 85% ;
     box-shadow: 5px 5px 37px #000;
 }
 
 .boton_inicio{
     display: block;
-    top: 15px;
     width: 200px;
     background-color: rgb(23, 23, 88);
-    color: honeydew;
+    color: white;
+    border-radius: 6px;
 }
+
 
 .input_login{
     width: 200px;
     height: 20px;
+    margin: 10px;
 }

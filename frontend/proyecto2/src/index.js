@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Inicio from './componentes/inicio/index';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+
+window.axios=axios;
+
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Inicio />
-  </React.StrictMode>,
+  // <React.StrictMode>
+      <Inicio />,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
