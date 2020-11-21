@@ -1,11 +1,11 @@
-.titulo_registro{
+.titulo_menu{
   font-size: 30px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: white;
   justify-content: center;
   align-items: center;
 }
-.contenedor_registro{
+.contenedor_menu{
   background: linear-gradient(200deg, rgb(21, 19, 134) 0%, rgb(8, 9, 85) 75%);
   height: 350px;
   display: flex;
@@ -13,21 +13,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 87% 13% 100% 0% / 0% 89% 11% 100% ;
+  border-radius: 100% 11% 89% 13% / 13% 87% 11% 89%;
   box-shadow: 5px 5px 37px #000;
 }
 
-.boton_registro{
+.boton_menu{
   display: block;
   width: 200px;
   border-radius: 6px;
-  color: white;
-  background-color: rgb(23, 23, 88);
-}
-
-.input_registro{
-  width: 200px;
-  height: 20px;
   margin: 10px;
-  border-radius: 6px;
 }
