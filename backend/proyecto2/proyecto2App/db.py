@@ -1,6 +1,6 @@
 import sqlite3
 from sqlite3 import Error
-import binascii, os,base64
+import binascii, os,base64,cifrado
 #from proyecto2App.cifrado import *
 
 db_file = 'files.db'
@@ -79,7 +79,8 @@ def getLogin(usuario, clave):
             print ("Tamaño de respuesta: ", len(rows))
             for row in rows:
                 print(row[3]) ##ESTA ES LA CLAVE A COMPARAR
-                if (clave == row[3]):
+                hashClave=cifrado.hash_Sha256(clave)
+                if (hashClave == row[3]):
                     print("La clave coincide")
                     return "ok"
                 else:
@@ -125,7 +126,8 @@ def setRegistro(nombres,apellidos,usuario,clave):
             cnn = conection(db_file)
             #insert registro
             cur = cnn.cursor()
-            cur.execute('INSERT INTO Usuarios(correo, nombre, usuario, clave) VALUES(?,?,?,?)' ,(nombres,apellidos,usuario,clave,))
+            hashClave=cifrado.hash_Sha256(clave)
+            cur.execute('INSERT INTO Usuarios(correo, nombre, usuario, clave) VALUES(?,?,?,?)' ,(nombres,apellidos,usuario,hashClave,))
             cnn.commit()
             cnn.close()
             print("Usuario registrado satisfactoriamente")
