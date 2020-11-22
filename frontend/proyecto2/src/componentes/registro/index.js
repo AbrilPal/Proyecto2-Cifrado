@@ -32,6 +32,7 @@ class Registro extends Component {
 		cred[event.target.name] = event.target.value;
 		this.setState({credentials: cred});
 	}
+	
 	render() {
 		return (
 			<div className="contenedor_registro">
