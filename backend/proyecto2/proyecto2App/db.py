@@ -205,17 +205,21 @@ def getValidarDoc(hashdoc, codigo):
         cur.execute("SELECT * FROM Docs WHERE ID=?", (codigo,))
         rows = cur.fetchall()
         print ("Tamaño de respuesta: ", len(rows))
-        for row in rows:
-            print(row[0]) ##ESTA ES EL HASH A COMPARAR
-            if (hashdoc == row[0]):
-                print("el hash  coincide")
-                return (True)
-            else:
-                print ("el hash no coincide")
-                return (False)
-               #hacer login
-            cnn.commit()
-            cnn.close()
+        if len(rows)==0:
+          return ("El archivo con el registro " , codigo, " no existe en la base de datos. Intente de nuevo ")
+        else:
+          
+          for row in rows:
+              print(row[0]) ##ESTA ES EL HASH A COMPARAR
+              if (hashdoc == row[0]):
+                  print("el hash  coincide")
+                  return ("El archivo ingresado es el mismo que el original")
+              else:
+                  print ("el hash no coincide")
+                  return ("El archivo ingresado es DIFERENTE al original, pudo haber sido modificado o en su defecto es otro")
+                 #hacer login
+              cnn.commit()
+              cnn.close()
     except Error as e:
             print (e)
     finally:
