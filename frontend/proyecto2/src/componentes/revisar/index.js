@@ -17,7 +17,6 @@ class Revisar extends Component {
 
 	onChangeHandler = event => {
 		var file = event.target.files[0];
-		
 		var reader = new FileReader()
 
 		reader.onload = function (event) {
@@ -42,7 +41,8 @@ class Revisar extends Component {
 		.then(data => data.json())
 		.then(
 			data => {
-				console.log(data)
+				var datos = JSON.stringify(data, undefined, '\t')
+				window.alert(datos)
 			}
 		)
 		.catch(
@@ -62,8 +62,7 @@ class Revisar extends Component {
 						className="input_revisar" 
 						type="file" 
 						name="dochash"
-						value=""
-						onChange={'' || this.onChangeHandler} />
+						onChange={this.onChangeHandler} />
 				</form>
 				<p>Escriba el codigo brindado</p>
 				<input 
