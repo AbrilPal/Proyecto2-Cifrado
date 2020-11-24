@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import { Link } from "react-router-dom";
 
 class Login extends Component {
 
@@ -50,7 +51,9 @@ class Login extends Component {
 					placeholder="Contraseña" 
 					value={this.state.credentials.clave}
 					onChange={this.inputChanged} />
-				<button className="boton_inicio" onClick={this.login}>Iniciar Sesion</button>
+				<Link to="/menu">
+					<button className="boton_inicio" onClick={this.login}>Iniciar Sesion</button>
+          		</Link>
 			</div>
 
 		);
